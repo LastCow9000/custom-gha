@@ -12,9 +12,9 @@ async function run() {
 
     const client = github.getOctokit(repoToken);
 
-    core.setOutput(`github lib: ${JSON.stringify(github)}`);
-    core.setOutput(`client: ${JSON.stringify(client)}`);
-    core.setOutput(`inputA: ${inputA} inputB:${inputB}`);
+    console.log(`github lib: ${JSON.stringify(github)}`);
+    console.log(`client: ${JSON.stringify(client)}`);
+    console.log(`inputA: ${inputA} inputB:${inputB}`);
   } catch (error) {
     core.setFailed(error.message);
   }
