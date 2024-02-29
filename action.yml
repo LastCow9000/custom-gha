@@ -4,7 +4,6 @@ inputs:
   repo-token:
     description: 'github repo token'
     required: true
-    default: ''
   input-A:
     description: 'test input A'
     required: false
