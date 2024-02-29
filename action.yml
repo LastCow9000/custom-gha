@@ -1,0 +1,19 @@
+name: 'Toy Action'
+description: 'toy action for test'
+inputs:
+  repo-token:
+    description: 'github repo token'
+    required: true
+    default: ''
+  input-A:
+    description: 'test input A'
+    required: false
+    default: 'inputA'
+  input-B:
+    description: 'test input B'
+    required: false
+    default: 'inputB'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
