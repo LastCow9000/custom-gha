@@ -12,9 +12,14 @@ async function run() {
 
     const client = github.getOctokit(repoToken);
 
+    const projectGetCard = await client.rest.projects.getCard();
+    const projectListCards = await client.rest.projects.listCards();
+
     console.log(`github lib: ${JSON.stringify(github)}`);
     console.log(`client: ${JSON.stringify(client)}`);
     console.log(`inputA: ${inputA} inputB:${inputB}`);
+    console.log(`projects getCard: ${JSON.stringify(projectGetCard)}`)
+    console.log(`projects listCards: ${JSON.stringify(projectListCards)}`)
   } catch (error) {
     core.setFailed(error.message);
   }
